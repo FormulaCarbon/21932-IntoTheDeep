@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.teleop;
+/*package org.firstinspires.ftc.teamcode.teleop;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
@@ -81,4 +81,4 @@ public class DeepTeleOp extends OpMode {
     public boolean rightTriggerBoolean() {
         return gamepad2.right_trigger > 0;
     }
-}
+}*/

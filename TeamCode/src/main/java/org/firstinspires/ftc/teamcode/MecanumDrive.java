@@ -60,17 +60,17 @@ public class MecanumDrive {
         public RevHubOrientationOnRobot.LogoFacingDirection logoFacingDirection =
                 RevHubOrientationOnRobot.LogoFacingDirection.UP;
         public RevHubOrientationOnRobot.UsbFacingDirection usbFacingDirection =
-                RevHubOrientationOnRobot.UsbFacingDirection.FORWARD;
+                RevHubOrientationOnRobot.UsbFacingDirection.RIGHT;
 
         // drive model parameters
         public double inPerTick = 1; // If you're using OTOS/Pinpoint leave this at 1 (all values will be in inches, 1 tick = 1 inch)
-        public double lateralInPerTick = inPerTick; // Tune this with LateralRampLogger (even if you use OTOS/Pinpoint)
-        public double trackWidthTicks = 0.8915769517728793;
+        public double lateralInPerTick = 1.32501; // Tune this with LateralRampLogger (even if you use OTOS/Pinpoint)
+        public double trackWidthTicks = 1.605;
 
         // feedforward parameters (in tick units)
-        public double kS =1.329784940726059;
-        public double kV = 0.11982742930621032;
-        public double kA = 0.01;
+        public double kS =1.8;
+        public double kV = 00.10102;
+        public double kA = 0.02;
 
         // path profile parameters (in inches)
         public double maxWheelVel = 50;
@@ -82,13 +82,13 @@ public class MecanumDrive {
         public double maxAngAccel =2* Math.PI;
 
         // path controller gains
-        public double axialGain = 8;
-        public double lateralGain = 8;
+        public double axialGain = 2;
+        public double lateralGain = 4;
         public double headingGain = 8; // shared with turn
 
-        public double axialVelGain = 1;
-        public double lateralVelGain = 1;
-        public double headingVelGain = 1; // shared with turn
+        public double axialVelGain = 4;
+        public double lateralVelGain = 2;
+        public double headingVelGain = 4; // shared with turn
     }
 
     public static Params PARAMS = new Params();
